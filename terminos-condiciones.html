@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos y Condiciones - RD Tasas de Cambio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c0c1ff",
+                        "secondary": "#ddb7ff",
+                        "surface": "#131313",
+                        "surface-container": "#1c1b1b",
+                        "on-surface": "#e5e2e1",
+                        "on-surface-variant": "#c7c4d7",
+                        "outline-variant": "#464554",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #131313; color: #e5e2e1; }
+        .text-gradient {
+            background: linear-gradient(to right, #c0c1ff, #ddb7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .policy-container h2 {
+            @apply text-xl font-bold text-secondary mt-8 mb-4 border-l-4 border-secondary pl-4;
+        }
+        .policy-container p, .policy-container li {
+            @apply text-on-surface-variant leading-relaxed mb-4;
+        }
+        .policy-container ul {
+            @apply list-disc ml-6 mb-6;
+        }
+    </style>
+</head>
+<body class="min-h-screen py-12 px-6 selection:bg-primary/30">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-16">
+            <a href="index.html" class="inline-flex items-center gap-2 text-primary font-bold text-sm mb-8 hover:opacity-80 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                Menú Principal
+            </a>
+            <h1 class="text-4xl md:text-5xl font-black tracking-tighter uppercase mb-4">
+                Términos y <span class="text-gradient">Condiciones</span>
+            </h1>
+            <p class="text-on-surface-variant font-mono text-xs uppercase tracking-widest">RD Tasas de Cambio • Actualizado: 20 Mar 2026</p>
+        </header>
+
+        <!-- Content Card -->
+        <div class="bg-surface-container p-8 md:p-12 rounded-3xl border border-outline-variant/30 shadow-2xl policy-container">
+            <p class="italic text-lg">Estos Términos y Condiciones regulan el acceso y uso de la aplicación móvil RD Tasas de Cambio, desarrollada por <strong>D_byte01</strong>. Al utilizar la aplicación, usted acepta cumplir con estos términos.</p>
+
+            <h2>1. Descripción del Servicio</h2>
+            <p>RD Tasas de Cambio es una aplicación informativa que:</p>
+            <ul>
+                <li>Muestra tasas de cambio de divisas agregando información pública de entidades financieras dominicanas.</li>
+                <li>Permite consultar datos de referencia de manera rápida.</li>
+            </ul>
+            <p><em>Importante: No somos una entidad financiera, no realizamos transacciones ni ofrecemos asesoramiento.</em></p>
+
+            <h2>2. Uso Aceptable</h2>
+            <p>El usuario se compromete a usar la app para fines legales. Queda prohibido:</p>
+            <ul>
+                <li>Uso fraudulento o interferencia con el sistema.</li>
+                <li>Acceso no autorizado a datos o distribución de contenido sin permiso.</li>
+            </ul>
+
+            <h2>3. Exactitud de la Información</h2>
+            <p>Nos esforzamos por la precisión, pero las tasas pueden variar en cualquier momento. El usuario es responsable de verificar la información antes de tomar decisiones financieras.</p>
+
+            <h2>4. Exclusión de Responsabilidad</h2>
+            <p>No nos hacemos responsables por pérdidas económicas derivadas del uso de la app. El uso es bajo su propio riesgo.</p>
+
+            <h2>5. Publicidad</h2>
+            <p>La aplicación puede mostrar anuncios (AdMob). No controlamos ni somos responsables del contenido de dichos anuncios.</p>
+
+            <h2>6. Propiedad Intelectual</h2>
+            <p>Todos los derechos sobre la app (diseño, código, logos y contenido) pertenecen a <strong>D_byte01</strong>. Queda prohibido su uso no autorizado.</p>
+
+            <h2>7. Enlaces a Terceros</h2>
+            <p>La app puede contener enlaces externos. No controlamos ni asumimos responsabilidad por dichos sitios.</p>
+
+            <h2>8. Disponibilidad del Servicio</h2>
+            <p>Nos reservamos el derecho de modificar, suspender o actualizar la aplicación sin previo aviso.</p>
+
+            <h2>9. Terminación</h2>
+            <p>Podemos suspender el acceso si el usuario viola estos términos o hace uso indebido del servicio.</p>
+
+            <h2>10. Privacidad</h2>
+            <p>El uso del servicio también está sujeto a nuestra <a href="politica-privacidad.html" class="text-primary hover:underline">Política de Privacidad</a>.</p>
+
+            <h2>11. Cambios en los Términos</h2>
+            <p>Podemos actualizar estos términos en cualquier momento y entrarán en vigor al ser publicados.</p>
+
+            <h2>12. Legislación Aplicable</h2>
+            <p>Estos términos se rigen por las leyes de la República Dominicana.</p>
+
+            <h2>13. Contacto</h2>
+            <div class="bg-surface p-6 rounded-xl border border-outline-variant/20 mt-8 flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                </div>
+                <div>
+                    <p class="text-xs uppercase font-bold text-on-surface-variant mb-1">Consultas Legales</p>
+                    <a href="mailto:Mt.Dante200GB@gmail.com" class="text-secondary font-bold hover:underline">Mt.Dante200GB@gmail.com</a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-12 text-center text-on-surface-variant text-sm border-t border-outline-variant/10 pt-8">
+            &copy; 2024 D_byte01 dev. Diseñado para espacios de alto rendimiento.
+        </footer>
+    </div>
+
+</body>
+</html>

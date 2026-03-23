@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - RD Tasas de Cambio</title>
+    <title>Privacidad - RD Tasas de Cambio</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -14,14 +14,11 @@
                     colors: {
                         "primary": "#c0c1ff",
                         "secondary": "#ddb7ff",
-                        "surface": "#131313",
-                        "surface-container": "#1c1b1b",
-                        "on-surface": "#e5e2e1",
-                        "on-surface-variant": "#c7c4d7",
-                        "outline-variant": "#464554",
+                        "surface": "#0a0a0a",
+                        "surface-container": "#141414",
                     },
                     fontFamily: {
-                        "sans": ["Inter", "sans-serif"],
+                        "sans": ["Outfit", "sans-serif"],
                         "mono": ["JetBrains Mono", "monospace"]
                     }
                 }
@@ -29,112 +26,120 @@
         }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #131313; color: #e5e2e1; }
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=JetBrains+Mono&display=swap');
+        body { font-family: 'Outfit', sans-serif; background-color: #0a0a0a; color: #e5e2e1; }
         .text-gradient {
-            background: linear-gradient(to right, #c0c1ff, #ddb7ff);
+            background: linear-gradient(135deg, #c0c1ff 0%, #ddb7ff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .policy-container h2 {
-            @apply text-xl font-bold text-primary mt-8 mb-4 border-l-4 border-primary pl-4;
+            @apply text-2xl font-black text-primary mt-12 mb-6 tracking-tight border-b border-primary/10 pb-2 uppercase;
         }
         .policy-container p, .policy-container li {
-            @apply text-on-surface-variant leading-relaxed mb-4;
+            @apply text-neutral-400 leading-relaxed mb-6 text-base font-normal;
         }
         .policy-container ul {
-            @apply list-disc ml-6 mb-6;
+            @apply list-none ml-2 mb-8 space-y-4;
+        }
+        .policy-container li {
+            @apply flex gap-3;
+        }
+        .policy-container li::before {
+            content: "•";
+            color: #c0c1ff;
+            font-weight: bold;
+        }
+        .glass-card {
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
     </style>
 </head>
-<body class="min-h-screen py-12 px-6 selection:bg-primary/30">
+<body class="min-h-screen py-20 px-6 selection:bg-primary/30 relative">
+    <!-- background accents -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none opacity-20 -z-10">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-[120px]"></div>
+    </div>
 
     <div class="max-w-4xl mx-auto">
         <!-- Header -->
-        <header class="text-center mb-16">
-            <a href="index.html" class="inline-flex items-center gap-2 text-primary font-bold text-sm mb-8 hover:opacity-80 transition-opacity">
+        <header class="text-center mb-24">
+            <a href="index.html" class="inline-flex items-center gap-3 px-6 py-2 bg-white/5 rounded-full border border-white/5 text-primary font-bold text-xs uppercase tracking-widest mb-12 hover:bg-white/10 transition-all">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
-                Menú Principal
+                Regresar
             </a>
-            <h1 class="text-4xl md:text-5xl font-black tracking-tighter uppercase mb-4">
+            <h1 class="text-5xl md:text-7xl font-black tracking-tighter uppercase mb-6">
                 Política de <span class="text-gradient">Privacidad</span>
             </h1>
-            <p class="text-on-surface-variant font-mono text-xs uppercase tracking-widest">RD Tasas de Cambio • Actualizado: 20 Mar 2026</p>
+            <p class="text-neutral-500 font-mono text-xs uppercase tracking-widest bg-primary/5 inline-block px-4 py-1 rounded">V6 • Actualizado: 20 Mar 2026</p>
         </header>
 
         <!-- Content Card -->
-        <div class="bg-surface-container p-8 md:p-12 rounded-3xl border border-outline-variant/30 shadow-2xl policy-container">
-            <p class="italic text-lg">Esta Política de Privacidad describe cómo <strong>D_byte01</strong> recopila, utiliza y protege la información de los usuarios de la aplicación móvil RD Tasas de Cambio. Al utilizar la aplicación, usted acepta los términos descritos aquí.</p>
+        <div class="glass-card p-10 md:p-16 rounded-[40px] shadow-2xl policy-container">
+            <p class="text-lg md:text-xl text-neutral-300 font-medium leading-relaxed italic border-l-4 border-primary/40 pl-8 mb-16">Esta Política de Privacidad describe cómo <strong>D_byte01</strong> recopila, utiliza y protege la información de los usuarios de la aplicación móvil RD Tasas de Cambio. Al utilizar la aplicación, usted acepta los términos descritos aquí.</p>
 
             <h2>1. Información que Recopilamos</h2>
-            <p>La aplicación ha sido diseñada para minimizar la recopilación de datos personales.</p>
+            <p>La aplicación ha sido diseñada bajo el principio de minimización de datos personales.</p>
             
-            <strong>a) Información técnica (Datos de uso)</strong>
-            <p>Podemos recopilar automáticamente cierta información técnica anónima únicamente con fines estadísticos y de mejora:</p>
+            <h3 class="text-primary font-bold mb-4 uppercase text-sm tracking-widest">a) Datos Técnicos</h3>
+            <p>Datos anónimos recopilados exclusivamente para optimización:</p>
             <ul>
-                <li>Modelo del dispositivo</li>
+                <li>Modelo del dispositivo y hardware</li>
                 <li>Versión del sistema operativo</li>
-                <li>Idioma del dispositivo</li>
-                <li>Interacciones dentro de la aplicación</li>
+                <li>Configuración de idioma local</li>
+                <li>Métricas de rendimiento e interacciones</li>
             </ul>
 
-            <strong>b) Datos de ubicación</strong>
-            <p>La aplicación puede solicitar acceso a su ubicación aproximada con el fin de mostrar entidades financieras cercanas y mejorar la relevancia del contenido.</p>
-            <p><em>Importante: No almacenamos su ubicación en nuestros servidores y puede desactivar este permiso en cualquier momento.</em></p>
+            <h3 class="text-primary font-bold mb-4 uppercase text-sm tracking-widest">b) Datos de Ubicación</h3>
+            <p>La aplicación solicita acceso a su ubicación aproximada para localizar entidades financieras cercanas de forma personalizada.</p>
+            <p class="text-secondary/80 font-bold uppercase text-[10px] tracking-widest">Aviso: No almacenamos ni transmitimos su ubicación exacta.</p>
 
-            <strong>c) Información proporcionada por el usuario</strong>
-            <p>No solicitamos registro de cuenta ni recopilamos nombres, correos electrónicos o números telefónicos para el uso básico.</p>
+            <h3 class="text-primary font-bold mb-4 uppercase text-sm tracking-widest">c) Datos Proporcionados</h3>
+            <p>No solicitamos registro de cuenta ni recopilamos nombres, correos o teléfonos para el funcionamiento estándar de la plataforma.</p>
 
             <h2>2. Uso de la Información</h2>
-            <p>Utilizamos la información recopilada exclusivamente para:</p>
+            <p>Los datos son procesados únicamente para:</p>
             <ul>
-                <li>Proporcionar datos actualizados de tasas de cambio</li>
-                <li>Mejorar el rendimiento y estabilidad de la aplicación</li>
-                <li>Detectar y corregir errores técnicos</li>
+                <li>Gestión de APIs de tasas de cambio</li>
+                <li>Mantenimiento de la estabilidad operativa</li>
+                <li>Optimización de la experiencia de usuario (UX)</li>
             </ul>
 
-            <h2>3. Servicios de Terceros</h2>
-            <p>La aplicación puede utilizar servicios de terceros que recopilan información de acuerdo con sus propias políticas:</p>
+            <h2>3. Servicios Externos</h2>
+            <p>Nuestra infraestructura utiliza socios certificados para servicios específicos:</p>
             <ul>
-                <li><strong>Google Play Services:</strong> Funcionalidad básica del sistema Android.</li>
-                <li><strong>Firebase Analytics:</strong> Análisis de uso (datos agregados y anónimos).</li>
+                <li><strong>Google Play Services:</strong> Infraestructura esencial de Android.</li>
+                <li><strong>Firebase Analytics:</strong> Reporte de incidencias y uso anónimo.</li>
             </ul>
 
-            <h2>4. Fuentes de Información Financiera</h2>
-            <p>RD Tasas de Cambio actúa como un agregador de información pública proveniente de diversas entidades financieras de la República Dominicana.</p>
+            <h2>4. Fuentes de Datos</h2>
+            <p>RD Tasas de Cambio funciona como un centro de agregación de datos públicos del sector financiero dominicano.</p>
             <ul>
-                <li>No somos una entidad bancaria ni realizamos transacciones.</li>
-                <li>No garantizamos coincidencia exacta con ventanilla (pueden variar sin aviso).</li>
+                <li>Operamos como medio informativo independiente.</li>
+                <li>No procesamos transacciones monetarias directas.</li>
             </ul>
 
-            <h2>5. Seguridad de la Información</h2>
-            <p>Adoptamos medidas razonables para proteger la información recopilada. Sin embargo, ningún sistema es completamente seguro y no podemos garantizar seguridad absoluta.</p>
+            <h2>5. Seguridad de Datos</h2>
+            <p>Utilizamos protocolos de cifrado y seguridad de alto nivel para proteger cualquier dato procesado dentro de nuestra infraestructura de Firebase.</p>
 
-            <h2>6. Enlaces a Sitios Externos</h2>
-            <p>La aplicación puede contener enlaces a sitios web de terceros (como bancos). No tenemos control sobre dichos sitios ni somos responsables de sus prácticas de privacidad.</p>
-
-            <h2>7. Privacidad de Menores</h2>
-            <p>La aplicación no está dirigida a menores de 13 años. No recopilamos intencionalmente datos de menores y eliminaremos cualquier dato detectado inmediatamente.</p>
-
-            <h2>8. Cambios a esta Política</h2>
-            <p>Podemos actualizar esta Política ocasionalmente. Los cambios serán publicados dentro de la aplicación o en esta página oficial.</p>
-
-            <h2>9. Contacto</h2>
-            <div class="bg-surface p-6 rounded-xl border border-outline-variant/20 mt-8 flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+            <h2>6. Contacto Directo</h2>
+            <div class="glass-card p-8 rounded-3xl mt-16 flex items-center gap-6 border border-primary/20">
+                <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                 </div>
                 <div>
-                    <p class="text-xs uppercase font-bold text-on-surface-variant mb-1">Email de Soporte</p>
-                    <a href="mailto:Mt.dante200gb@gmail.com" class="text-primary font-bold hover:underline">Mt.dante200gb@gmail.com</a>
+                    <p class="text-[10px] uppercase font-black text-primary tracking-widest mb-1">Email de Soporte</p>
+                    <a href="mailto:mt.dante200gb@gmail.com" class="text-xl font-bold hover:text-primary transition-colors">mt.dante200gb@gmail.com</a>
                 </div>
             </div>
         </div>
 
-        <footer class="mt-12 text-center text-on-surface-variant text-sm border-t border-outline-variant/10 pt-8">
-            &copy; 2024 D_byte01 dev. Diseñado para espacios de alto rendimiento.
+        <footer class="mt-20 text-center text-neutral-600 text-sm font-mono tracking-widest">
+            &copy; 2024 D_BYTE01 • DESIGN FOR HIGH PERFORMANCE
         </footer>
     </div>
-
 </body>
 </html>

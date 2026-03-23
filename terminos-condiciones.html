@@ -14,14 +14,11 @@
                     colors: {
                         "primary": "#c0c1ff",
                         "secondary": "#ddb7ff",
-                        "surface": "#131313",
-                        "surface-container": "#1c1b1b",
-                        "on-surface": "#e5e2e1",
-                        "on-surface-variant": "#c7c4d7",
-                        "outline-variant": "#464554",
+                        "surface": "#0a0a0a",
+                        "surface-container": "#141414",
                     },
                     fontFamily: {
-                        "sans": ["Inter", "sans-serif"],
+                        "sans": ["Outfit", "sans-serif"],
                         "mono": ["JetBrains Mono", "monospace"]
                     }
                 }
@@ -29,104 +26,107 @@
         }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #131313; color: #e5e2e1; }
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=JetBrains+Mono&display=swap');
+        body { font-family: 'Outfit', sans-serif; background-color: #0a0a0a; color: #e5e2e1; }
         .text-gradient {
-            background: linear-gradient(to right, #c0c1ff, #ddb7ff);
+            background: linear-gradient(135deg, #c0c1ff 0%, #ddb7ff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .policy-container h2 {
-            @apply text-xl font-bold text-secondary mt-8 mb-4 border-l-4 border-secondary pl-4;
+            @apply text-2xl font-black text-secondary mt-12 mb-6 tracking-tight border-b border-secondary/10 pb-2 uppercase;
         }
         .policy-container p, .policy-container li {
-            @apply text-on-surface-variant leading-relaxed mb-4;
+            @apply text-neutral-400 leading-relaxed mb-6 text-base font-normal;
         }
         .policy-container ul {
-            @apply list-disc ml-6 mb-6;
+            @apply list-none ml-2 mb-8 space-y-4;
+        }
+        .policy-container li {
+            @apply flex gap-3;
+        }
+        .policy-container li::before {
+            content: "→";
+            color: #ddb7ff;
+            font-weight: bold;
+        }
+        .glass-card {
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
     </style>
 </head>
-<body class="min-h-screen py-12 px-6 selection:bg-primary/30">
+<body class="min-h-screen py-20 px-6 selection:bg-primary/30 relative">
+    <!-- background accents -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none opacity-20 -z-10">
+        <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px]"></div>
+    </div>
 
     <div class="max-w-4xl mx-auto">
         <!-- Header -->
-        <header class="text-center mb-16">
-            <a href="index.html" class="inline-flex items-center gap-2 text-primary font-bold text-sm mb-8 hover:opacity-80 transition-opacity">
+        <header class="text-center mb-24">
+            <a href="index.html" class="inline-flex items-center gap-3 px-6 py-2 bg-white/5 rounded-full border border-white/5 text-primary font-bold text-xs uppercase tracking-widest mb-12 hover:bg-white/10 transition-all">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
-                Menú Principal
+                Regresar
             </a>
-            <h1 class="text-4xl md:text-5xl font-black tracking-tighter uppercase mb-4">
+            <h1 class="text-5xl md:text-7xl font-black tracking-tighter uppercase mb-6">
                 Términos y <span class="text-gradient">Condiciones</span>
             </h1>
-            <p class="text-on-surface-variant font-mono text-xs uppercase tracking-widest">RD Tasas de Cambio • Actualizado: 20 Mar 2026</p>
+            <p class="text-neutral-500 font-mono text-xs uppercase tracking-widest bg-secondary/5 inline-block px-4 py-1 rounded">V6 • Actualizado: 20 Mar 2026</p>
         </header>
 
         <!-- Content Card -->
-        <div class="bg-surface-container p-8 md:p-12 rounded-3xl border border-outline-variant/30 shadow-2xl policy-container">
-            <p class="italic text-lg">Estos Términos y Condiciones regulan el acceso y uso de la aplicación móvil RD Tasas de Cambio, desarrollada por <strong>D_byte01</strong>. Al utilizar la aplicación, usted acepta cumplir con estos términos.</p>
+        <div class="glass-card p-10 md:p-16 rounded-[40px] shadow-2xl policy-container">
+            <p class="text-lg md:text-xl text-neutral-300 font-medium leading-relaxed italic border-l-4 border-secondary/40 pl-8 mb-16">Estos Términos y Condiciones regulan el acceso y uso de la aplicación móvil RD Tasas de Cambio, desarrollada por <strong>D_byte01</strong>. Al utilizar la aplicación, usted acepta cumplir con estos términos.</p>
 
             <h2>1. Descripción del Servicio</h2>
-            <p>RD Tasas de Cambio es una aplicación informativa que:</p>
+            <p>RD Tasas de Cambio es una aplicación digital informativa con los siguientes objetivos:</p>
             <ul>
-                <li>Muestra tasas de cambio de divisas agregando información pública de entidades financieras dominicanas.</li>
-                <li>Permite consultar datos de referencia de manera rápida.</li>
+                <li>Agregación de indicadores económicos de fuentes oficiales dominicanas.</li>
+                <li>Consulta de tasas de cambio dinámicas para fines de referencia individual.</li>
             </ul>
-            <p><em>Importante: No somos una entidad financiera, no realizamos transacciones ni ofrecemos asesoramiento.</em></p>
+            <p class="text-primary font-bold uppercase text-[10px] tracking-widest">Aviso Legal: No operamos como banco ni intermediario financiero.</p>
 
-            <h2>2. Uso Aceptable</h2>
-            <p>El usuario se compromete a usar la app para fines legales. Queda prohibido:</p>
+            <h2>2. Compromiso del Usuario</h2>
+            <p>El usuario acepta utilizar el servicio para fines lícitos y bajo su propio criterio. Queda prohibido:</p>
             <ul>
-                <li>Uso fraudulento o interferencia con el sistema.</li>
-                <li>Acceso no autorizado a datos o distribución de contenido sin permiso.</li>
+                <li>Ingeniería inversa sobre el código o servicios API.</li>
+                <li>Uso masivo de scrapers sobre el backend de la aplicación.</li>
+                <li>Distribución de copias no autorizadas del software.</li>
             </ul>
 
-            <h2>3. Exactitud de la Información</h2>
-            <p>Nos esforzamos por la precisión, pero las tasas pueden variar en cualquier momento. El usuario es responsable de verificar la información antes de tomar decisiones financieras.</p>
+            <h2>3. Exactitud de Indicadores</h2>
+            <p>Nos esforzamos por la sincronización en tiempo real, pero las fluctuaciones bancarias pueden variar en cualquier momento. El usuario es responsable de verificar la información oficial en ventanilla antes de cualquier transacción.</p>
 
-            <h2>4. Exclusión de Responsabilidad</h2>
-            <p>No nos hacemos responsables por pérdidas económicas derivadas del uso de la app. El uso es bajo su propio riesgo.</p>
+            <h2>4. Limitación de Responsabilidad</h2>
+            <p>D_byte01 no asume responsabilidad por decisiones financieras tomadas basadas en los datos mostrados. Los indicadores son puramente referenciales.</p>
 
-            <h2>5. Publicidad</h2>
-            <p>La aplicación puede mostrar anuncios (AdMob). No controlamos ni somos responsables del contenido de dichos anuncios.</p>
+            <h2>5. Propiedad Intelectual</h2>
+            <p>Todos los activos visuales, código fuente y estructuras de datos propias son propiedad de <strong>D_byte01</strong>. Queda prohibido el uso no autorizado de interfaces y branding.</p>
 
-            <h2>6. Propiedad Intelectual</h2>
-            <p>Todos los derechos sobre la app (diseño, código, logos y contenido) pertenecen a <strong>D_byte01</strong>. Queda prohibido su uso no autorizado.</p>
+            <h2>6. Publicidad y Terceros</h2>
+            <p>La app puede integrar servicios de terceros (Google AdMob). El acceso a enlaces externos está sujeto a las políticas respectivas del destino final.</p>
 
-            <h2>7. Enlaces a Terceros</h2>
-            <p>La app puede contener enlaces externos. No controlamos ni asumimos responsabilidad por dichos sitios.</p>
+            <h2>7. Jurisdicción Legal</h2>
+            <p>Este documento se rige bajo las leyes y regulaciones vigentes en la República Dominicana.</p>
 
-            <h2>8. Disponibilidad del Servicio</h2>
-            <p>Nos reservamos el derecho de modificar, suspender o actualizar la aplicación sin previo aviso.</p>
-
-            <h2>9. Terminación</h2>
-            <p>Podemos suspender el acceso si el usuario viola estos términos o hace uso indebido del servicio.</p>
-
-            <h2>10. Privacidad</h2>
-            <p>El uso del servicio también está sujeto a nuestra <a href="politica-privacidad.html" class="text-primary hover:underline">Política de Privacidad</a>.</p>
-
-            <h2>11. Cambios en los Términos</h2>
-            <p>Podemos actualizar estos términos en cualquier momento y entrarán en vigor al ser publicados.</p>
-
-            <h2>12. Legislación Aplicable</h2>
-            <p>Estos términos se rigen por las leyes de la República Dominicana.</p>
-
-            <h2>13. Contacto</h2>
-            <div class="bg-surface p-6 rounded-xl border border-outline-variant/20 mt-8 flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+            <h2>8. Canal de Consulta</h2>
+            <div class="glass-card p-8 rounded-3xl mt-16 flex items-center gap-6 border border-secondary/20">
+                <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary group transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                 </div>
                 <div>
-                    <p class="text-xs uppercase font-bold text-on-surface-variant mb-1">Consultas Legales</p>
-                    <a href="mailto:Mt.Dante200GB@gmail.com" class="text-secondary font-bold hover:underline">Mt.Dante200GB@gmail.com</a>
+                    <p class="text-[10px] uppercase font-black text-secondary tracking-widest mb-1">Consultas Legales</p>
+                    <a href="mailto:mt.dante200gb@gmail.com" class="text-xl font-bold hover:text-secondary transition-colors">mt.dante200gb@gmail.com</a>
                 </div>
             </div>
         </div>
 
-        <footer class="mt-12 text-center text-on-surface-variant text-sm border-t border-outline-variant/10 pt-8">
-            &copy; 2024 D_byte01 dev. Diseñado para espacios de alto rendimiento.
+        <footer class="mt-20 text-center text-neutral-600 text-sm font-mono tracking-widest">
+            &copy; 2024 D_BYTE01 • DESIGN FOR HIGH PERFORMANCE
         </footer>
     </div>
-
 </body>
 </html>

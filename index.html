@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soporte Legal - RD Tasas de Cambio</title>
+    <title>Centro Legal - RD Tasas de Cambio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -13,53 +13,84 @@
                     colors: {
                         "primary": "#c0c1ff",
                         "secondary": "#ddb7ff",
-                        "surface": "#131313",
-                        "surface-container": "#1c1b1b",
+                        "surface": "#0a0a0a",
+                        "surface-container": "#141414",
                     }
                 }
             }
         }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-        body { font-family: 'Inter', sans-serif; background: #131313; color: #e5e2e1; }
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=JetBrains+Mono&display=swap');
+        body { font-family: 'Outfit', sans-serif; background: #0a0a0a; color: #e5e2e1; }
         .text-gradient {
-            background: linear-gradient(to right, #c0c1ff, #ddb7ff);
+            background: linear-gradient(135deg, #c0c1ff 0%, #ddb7ff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .hero-glow {
+            background: radial-gradient(circle at 50% 50%, rgba(192, 193, 255, 0.08) 0%, transparent 60%);
+        }
+        .glass-card {
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .animate-subtle {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
     </style>
 </head>
-<body class="min-h-screen flex items-center justify-center p-6 bg-surface">
-    <div class="max-w-md w-full text-center">
-        <div class="mb-12">
-            <h1 class="text-4xl font-black tracking-tighter uppercase mb-4">Soporte <span class="text-gradient">Legal</span></h1>
-            <p class="text-neutral-500 font-bold uppercase tracking-widest text-xs">RD Tasas de Cambio</p>
+<body class="min-h-screen flex items-center justify-center p-6 bg-surface relative overflow-hidden hero-glow">
+    <!-- background accents -->
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+    <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-secondary/10 rounded-full blur-[120px]"></div>
+
+    <div class="max-w-2xl w-full text-center relative z-10 animate-subtle">
+        <div class="mb-16">
+            <span class="text-[10px] font-bold tracking-[0.3em] text-primary uppercase mb-4 block">Documentación Oficial</span>
+            <h1 class="text-5xl md:text-7xl font-black tracking-tighter uppercase mb-6">
+                Soporte <span class="text-gradient">Legal</span>
+            </h1>
+            <p class="text-neutral-500 font-mono text-xs uppercase tracking-widest max-w-xs mx-auto">RD Tasas de Cambio • Proyectos de Alto Impacto</p>
         </div>
 
-        <div class="space-y-4">
-            <a href="politica-privacidad.html" class="block w-full p-6 bg-surface-container rounded-2xl border border-primary/20 hover:border-primary transition-all text-left group">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <h3 class="text-primary font-bold">Política de Privacidad</h3>
-                        <p class="text-xs text-neutral-500 mt-1">Cómo protegemos tus datos.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="politica-privacidad.html" class="glass-card p-10 rounded-3xl group hover:border-primary/40 hover:bg-primary/5 transition-all duration-500 overflow-hidden relative">
+                <div class="absolute -top-10 -left-10 w-24 h-24 bg-primary/10 rounded-full blur-2xl group-hover:scale-150 transition-transform"></div>
+                <div class="relative z-10 text-left">
+                    <div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
                     </div>
-                    <span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">→</span>
+                    <h3 class="text-xl font-bold text-on-surface mb-2">Privacidad</h3>
+                    <p class="text-sm text-neutral-500 leading-relaxed">Protección de datos y uso responsable.</p>
                 </div>
             </a>
 
-            <a href="terminos-condiciones.html" class="block w-full p-6 bg-surface-container rounded-2xl border border-secondary/20 hover:border-secondary transition-all text-left group">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <h3 class="text-secondary font-bold">Términos & Condiciones</h3>
-                        <p class="text-xs text-neutral-500 mt-1">Reglas y acuerdos del servicio.</p>
+            <a href="terminos-condiciones.html" class="glass-card p-10 rounded-3xl group hover:border-secondary/40 hover:bg-secondary/5 transition-all duration-500 overflow-hidden relative">
+                <div class="absolute -top-10 -left-10 w-24 h-24 bg-secondary/10 rounded-full blur-2xl group-hover:scale-150 transition-transform"></div>
+                <div class="relative z-10 text-left">
+                    <div class="w-12 h-12 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                     </div>
-                    <span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform">→</span>
+                    <h3 class="text-xl font-bold text-on-surface mb-2">Condiciones</h3>
+                    <p class="text-sm text-neutral-500 leading-relaxed">Términos de servicio y acuerdos legales.</p>
                 </div>
             </a>
         </div>
 
-        <p class="mt-12 text-xs text-neutral-600">© 2024 D_byte01 dev. All rights reserved.</p>
+        <div class="mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-[10px] text-neutral-600 font-mono tracking-widest uppercase italic">Autorizado: D_byte01 dev</p>
+            <div class="flex gap-4">
+                <div class="w-2 h-2 rounded-full bg-primary/20"></div>
+                <div class="w-2 h-2 rounded-full bg-secondary/20"></div>
+                <div class="w-2 h-2 rounded-full bg-primary/20"></div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

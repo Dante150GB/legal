@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - Santa Biblia Reina Valera 1960</title>
+    <meta name="description" content="Política de Privacidad de la aplicación Santa Biblia Reina Valera 1960 (Sin Anuncio).">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --primary:           #7b5800;
+            --primary-container: #e1aa36;
+            --secondary:         #805437;
+            --background:        #fff8ef;
+            --surface-low:       #fbf3e4;
+            --surface-cont:      #f5edde;
+            --surface-high:      #efe7d9;
+            --on-bg:             #1e1b13;
+            --on-surface-var:    #4d4635;
+            --outline:           #7f7663;
+            --outline-var:       #d0c5af;
+            --gold-light:        #f7bd48;
+        }
+
+        body {
+            font-family: 'Newsreader', Georgia, serif;
+            background-color: var(--background);
+            background-image:
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.07'/%3E%3C/svg%3E"),
+                linear-gradient(160deg, #fff8ef 0%, #fdf0dc 50%, #fff8ef 100%);
+            background-size: 300px 300px, 100% 100%;
+            color: var(--on-bg);
+            min-height: 100vh;
+            padding: 36px 20px 60px;
+        }
+
+        .wrapper { max-width: 700px; margin: 0 auto; }
+
+        /* ── Back link ───────────────────────────────────── */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--on-surface-var);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-style: italic;
+            margin-bottom: 32px;
+            transition: color 0.2s;
+        }
+        .back-link:hover { color: var(--primary); }
+        .back-link::before { content: '←'; font-style: normal; }
+
+        /* ── Header ─────────────────────────────────────── */
+        .header {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin-bottom: 36px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--outline-var);
+        }
+        .header-icon {
+            width: 58px; height: 58px; flex-shrink: 0;
+            background: rgba(123,88,0,0.1);
+            border: 1px solid rgba(123,88,0,0.2);
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 28px;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(123,88,0,0.08);
+            color: var(--primary);
+            border: 1px solid rgba(123,88,0,0.2);
+            border-radius: 20px;
+            padding: 2px 12px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .header-text h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.2;
+            margin-bottom: 6px;
+        }
+        .header-text .meta {
+            color: var(--outline);
+            font-size: 0.85rem;
+            font-style: italic;
+        }
+
+        /* ── Sections ───────────────────────────────────── */
+        .content section { margin-bottom: 34px; }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+        .section-number {
+            width: 26px; height: 26px; flex-shrink: 0;
+            background: rgba(123,88,0,0.1);
+            border: 1px solid rgba(123,88,0,0.25);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .content h2 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        .content p {
+            color: var(--on-surface-var);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 14px;
+        }
+        .content ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 14px;
+        }
+        .content ul li {
+            font-size: 0.925rem;
+            color: var(--on-surface-var);
+            line-height: 1.7;
+            padding: 9px 12px 9px 30px;
+            position: relative;
+            margin-bottom: 7px;
+            background: var(--surface-low);
+            border: 1px solid var(--outline-var);
+            border-left: 3px solid var(--primary-container);
+            border-radius: 0 8px 8px 0;
+        }
+        .content ul li::before {
+            content: '✦';
+            position: absolute;
+            left: 8px;
+            color: var(--primary-container);
+            font-size: 0.65rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .callout {
+            background: rgba(247,189,72,0.1);
+            border: 1px solid rgba(225,170,54,0.35);
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin-bottom: 14px;
+        }
+        .callout p { color: var(--primary); margin: 0; font-style: italic; }
+
+        /* ── Footer ─────────────────────────────────────── */
+        .footer {
+            text-align: center;
+            color: var(--outline);
+            font-size: 0.82rem;
+            font-style: italic;
+            margin-top: 52px;
+            padding-top: 22px;
+            border-top: 1px solid var(--outline-var);
+            line-height: 2;
+        }
+        .footer-ornament {
+            color: var(--primary-container);
+            font-size: 1.1rem;
+            letter-spacing: 8px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        a[href^="http"] { color: var(--secondary); }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <a href="index.html" class="back-link" id="btn-volver-privacidad">Volver al Centro Legal</a>
+
+        <header class="header">
+            <div class="header-icon">🔒</div>
+            <div class="header-text">
+                <span class="badge">Privacidad</span>
+                <h1>Política de Privacidad</h1>
+                <p class="meta">Santa Biblia RVR1960 · Actualizado: Mayo 2026</p>
+            </div>
+        </header>
+
+        <div class="content">
+
+            <section>
+                <div class="section-header">
+                    <div class="section-number">1</div>
+                    <h2>Información que recopilamos</h2>
+                </div>
+                <p>Nuestra aplicación está diseñada para funcionar principalmente de forma <strong>sin conexión (offline)</strong>. No requerimos que el usuario cree una cuenta ni proporcione ningún dato personal identificable —como nombre, correo electrónico o número de teléfono— para acceder al contenido bíblico.</p>
+                <div class="callout">
+                    <p>🛡️ No recopilamos ni almacenamos información personal identificable de ningún usuario.</p>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-header">
+                    <div class="section-number">2</div>
+                    <h2>Servicios de terceros — Firebase</h2>
+                </div>
+                <p>Para garantizar el buen funcionamiento y mejorar la calidad de la aplicación, utilizamos servicios de <strong>Google Firebase</strong>. Estos servicios pueden recopilar información técnica anónima, incluyendo:</p>
+                <ul>
+                    <li>Información del dispositivo (modelo, versión de Android, resolución de pantalla).</li>
+                    <li>Informes de fallos o bloqueos (Firebase Crashlytics), para detectar y corregir errores.</li>
+                    <li>Estadísticas de uso anónimas (Firebase Analytics), para entender qué funciones se utilizan más.</li>
+                    <li>País o región general (sin geolocalización precisa).</li>
+                </ul>
+                <p>Esta información es completamente anónima y nunca está vinculada a tu identidad. Puedes consultar la <a href="https://policies.google.com/privacy" target="_blank">Política de Privacidad de Google</a> para más detalles.</p>
+            </section>
+
+            <section>
+                <div class="section-header">
+                    <div class="section-number">3</div>
+                    <h2>Uso de la información recopilada</h2>
+                </div>
+                <p>Los datos técnicos anónimos recopilados se utilizan exclusivamente para:</p>
+                <ul>
+                    <li>Detectar, diagnosticar y corregir fallos en la aplicación.</li>
+                    <li>Analizar el rendimiento en distintos dispositivos y versiones de Android.</li>
+                    <li>Mejorar la experiencia de usuario en futuras actualizaciones.</li>
+                </ul>
+            </section>
+
+            <section>
+                <div class="section-header">
+                    <div class="section-number">4</div>
+                    <h2>Privacidad de los niños</h2>
+                </div>
+                <p>La aplicación es apta para todas las edades. No recopilamos de forma consciente información personal de menores de 13 años. Si detectásemos que hemos recibido datos personales de un niño, los eliminaríamos inmediatamente de nuestros registros.</p>
+            </section>
+
+            <section>
+                <div class="section-header">
+                    <div class="section-number">5</div>
+                    <h2>Almacenamiento local</h2>
+                </div>
+                <p>La aplicación puede guardar tus preferencias de lectura (como el tema visual o el último libro/capítulo leído) de forma local en tu dispositivo, sin enviar esta información a ningún servidor externo. Estos datos pueden eliminarse desinstalando la aplicación.</p>
+            </section>
+
+            <section>
+                <div class="section-header">
+                    <div class="section-number">6</div>
+                    <h2>Cambios en esta política</h2>
+                </div>
+                <p>Podemos actualizar esta Política de Privacidad ocasionalmente para reflejar cambios en nuestras prácticas o por requisitos legales. Notificaremos cualquier cambio significativo actualizando la fecha de "Última actualización" en esta página.</p>
+            </section>
+
+            <section>
+                <div class="section-header">
+                    <div class="section-number">7</div>
+                    <h2>Contacto</h2>
+                </div>
+                <p>Si tienes preguntas o solicitudes relacionadas con esta Política de Privacidad, puedes contactarnos a través de la información de contacto del desarrollador disponible en la ficha de la aplicación en <strong>Google Play Store</strong>.</p>
+            </section>
+
+        </div>
+
+        <footer class="footer">
+            <span class="footer-ornament">❧</span>
+            <p>&copy; 2026 Santa Biblia Reina Valera 1960 (Sin Anuncio) · Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos de Uso - Santa Biblia Reina Valera 1960</title>
+    <meta name="description" content="Términos de Uso y Condiciones de la aplicación Santa Biblia Reina Valera 1960 (Sin Anuncio).">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --primary:           #7b5800;
+            --primary-container: #e1aa36;
+            --secondary:         #805437;
+            --background:        #fff8ef;
+            --surface-low:       #fbf3e4;
+            --surface-cont:      #f5edde;
+            --surface-high:      #efe7d9;
+            --on-bg:             #1e1b13;
+            --on-surface-var:    #4d4635;
+            --outline:           #7f7663;
+            --outline-var:       #d0c5af;
+            --gold-light:        #f7bd48;
+        }
+
+        body {
+            font-family: 'Newsreader', Georgia, serif;
+            background-color: var(--background);
+            background-image:
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.07'/%3E%3C/svg%3E"),
+                linear-gradient(160deg, #fff8ef 0%, #fdf0dc 50%, #fff8ef 100%);
+            background-size: 300px 300px, 100% 100%;
+            color: var(--on-bg);
+            min-height: 100vh;
+            padding: 36px 20px 60px;
+        }
+
+        .wrapper { max-width: 700px; margin: 0 auto; }
+
+        /* ── Back link ───────────────────────────────────── */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--on-surface-var);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-style: italic;
+            margin-bottom: 32px;
+            transition: color 0.2s;
+        }
+        .back-link:hover { color: var(--primary); }
+        .back-link::before { content: '←'; font-style: normal; }
+
+        /* ── Header ─────────────────────────────────────── */
+        .header {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin-bottom: 36px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--outline-var);
+        }
+        .header-icon {
+            width: 58px; height: 58px; flex-shrink: 0;
+            background: rgba(123,88,0,0.1);
+            border: 1px solid rgba(123,88,0,0.2);
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 28px;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(123,88,0,0.08);
+            color: var(--primary);
+            border: 1px solid rgba(123,88,0,0.2);
+            border-radius: 20px;
+            padding: 2px 12px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .header-text h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.2;
+            margin-bottom: 6px;
+        }
+        .header-text .meta {
+            color: var(--outline);
+            font-size: 0.85rem;
+            font-style: italic;
+        }
+
+        /* ── Sections ───────────────────────────────────── */
+        .content section { margin-bottom: 34px; }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+        .section-number {
+            width: 26px; height: 26px; flex-shrink: 0;
+            background: rgba(123,88,0,0.1);
+            border: 1px solid rgba(123,88,0,0.25);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .content h2 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        .content p {
+            color: var(--on-surface-var);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 14px;
+        }
+        .content ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 14px;
+        }
+        .content ul li {
+            font-size: 0.925rem;
+            color: var(--on-surface-var);
+            line-height: 1.7;
+            padding: 9px 12px 9px 30px;
+            position: relative;
+            margin-bottom: 7px;
+            background: var(--surface-low);
+            border: 1px solid var(--outline-var);
+            border-left: 3px solid var(--primary-container);
+            border-radius: 0 8px 8px 0;
+        }
+        .content ul li::before {
+            content: '✦';
+            position: absolute;
+            left: 8px;
+            color: var(--primary-container);
+            font-size: 0.65rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Callout dorado: info/advertencia */
+        .callout {
+            background: rgba(247,189,72,0.1);
+            border: 1px solid rgba(225,170,54,0.35);
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin-bottom: 14px;
+        }
+        .callout p { color: var(--primary); margin: 0; font-style: italic; }
+
+        /* Callout rojo: prohibición */
+        .callout-danger {
+            background: rgba(186,26,26,0.06);
+            border: 1px solid rgba(186,26,26,0.2);
+        }
+        .callout-danger p { color: #8b1313; }
+
+        /* Callout verde: permitido */
+        .callout-ok {
+            background: rgba(34,120,60,0.06);
+            border: 1px solid rgba(34,120,60,0.2);
+        }
+        .callout-ok p { color: #1a5c33; }
+
+        /* ── Footer ─────────────────────────────────────── */
+        .footer {
+            text-align: center;
+            color: var(--outline);
+            font-size: 0.82rem;
+            font-style: italic;
+            margin-top: 52px;
+            padding-top: 22px;
+            border-top: 1px solid var(--outline-var);
+            line-height: 2;
+        }
+        .footer-ornament {
+            color: var(--primary-container);
+            font-size: 1.1rem;
+            letter-spacing: 8px;
+            display: block;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <a href="index.html" class="back-link" id="btn-volver-terminos">Volver al Centro Legal</a>
+
+        <header class="header">
+            <div class="header-icon">📜</div>
+            <div class="header-text">
+                <span class="badge">Condiciones</span>
+                <h1>Términos de Uso</h1>
+                <p class="meta">Santa Biblia RVR1960 · Actualizado: Mayo 2026</p>
+            </div>
+        </header>
+
+        <div class="content">
+
+            <section>
+                <div class="section-header">
+                    <div class="section-number">1</div>
+                    <h2>Aceptación de los Términos</h2>
+                </div>
+                <p>Al descargar, instalar o utilizar la aplicación <strong>Santa Biblia Reina Valera 1960 (Sin Anuncio)</strong>, usted acepta automáticamente quedar vinculado por estos Términos de Uso. Si no está de acuerdo con alguna de las condiciones aquí descritas, le pedimos que no instale ni utilice la aplicación.</p>
+                <p>Estos términos pueden actualizarse en cualquier momento. El uso continuado de la aplicación tras cualquier modificación implica la aceptación de los nuevos términos.</p>
+            </section>
+
+            <section>
+                <div class="section-header">
+                    <div class="section-number">2</div>
+                    <h2>Uso permitido</h2>
+                </div>
+                <p>Esta aplicación es de uso gratuito y está destinada para fines personales, espirituales, de estudio y no comerciales. Está permitido:</p>
+                <ul>
+                    <li>Leer, estudiar y meditar en el texto bíblico de la Reina Valera 1960.</li>
+                    <li>Compartir versículos a través de las funciones integradas de la aplicación.</li>
+                    <li>Usar la aplicación en múltiples dispositivos de tu propiedad.</li>
+                </ul>
+                <div class="callout callout-ok">
+                    <p>✅ La aplicación se ofrece de forma gratuita y sin anuncios publicitarios.</p>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-header">
+                    <div class="section-number">3</div>
+                    <h2>Usos prohibidos</h2>
+                </div>
+                <p>El usuario acepta expresamente que <strong>no está permitido</strong>:</p>
+                <ul>
+                    <li>Copiar, modificar, descompilar o realizar ingeniería inversa sobre la aplicación.</li>
+                    <li>Distribuir, sublicenciar, vender o ceder la aplicación a terceros.</li>
+                    <li>Crear versiones derivadas, traducciones o adaptaciones de la aplicación.</li>
+                    <li>Usar la aplicación para fines comerciales sin autorización expresa del desarrollador.</li>
+                    <li>Interferir con el correcto funcionamiento de la aplicación o intentar dañarla.</li>
+                </ul>
+                <div class="callout callout-danger">
+                    <p>⚠️ El incumplimiento puede derivar en acciones legales por violación de derechos de autor.</p>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-header">
+                    <div class="section-number">4</div>
+                    <h2>Propiedad intelectual</h2>
+                </div>
+                <p>El <strong>texto bíblico de la Reina Valera 1960</strong> se distribuye bajo las licencias correspondientes que permiten su uso y distribución libre.</p>
+                <p>La <strong>interfaz gráfica, el diseño visual y el código fuente</strong> (excluyendo bibliotecas de terceros de código abierto) son propiedad intelectual exclusiva del desarrollador y están protegidos por las leyes de derechos de autor aplicables.</p>
+            </section>
+
+            <section>
+                <div class="section-header">
+                    <div class="section-number">5</div>
+                    <h2>Disponibilidad y actualizaciones</h2>
+                </div>
+                <p>El desarrollador se reserva el derecho de modificar, actualizar, suspender o descontinuar la aplicación en cualquier momento y sin previo aviso. Se recomienda mantener siempre la versión más reciente instalada para garantizar el correcto funcionamiento y la seguridad.</p>
+            </section>
+
+            <section>
+                <div class="section-header">
+                    <div class="section-number">6</div>
+                    <h2>Limitación de responsabilidad</h2>
+                </div>
+                <p>La aplicación se proporciona <strong>"tal cual" y "según disponibilidad"</strong>, sin garantías de ningún tipo. El desarrollador no garantiza que la aplicación funcione de forma ininterrumpida, sin errores o sea compatible con todos los dispositivos y versiones de Android.</p>
+                <p>El desarrollador no asume responsabilidad por ningún daño directo, indirecto o consecuente derivado del uso o la imposibilidad de uso de la aplicación.</p>
+            </section>
+
+            <section>
+                <div class="section-header">
+                    <div class="section-number">7</div>
+                    <h2>Servicios de terceros</h2>
+                </div>
+                <p>La aplicación integra servicios de terceros (como Firebase de Google) que tienen sus propias condiciones de uso y políticas de privacidad, cuya aceptación es independiente de estos términos. El desarrollador no asume responsabilidad por las prácticas de dichos servicios.</p>
+            </section>
+
+            <section>
+                <div class="section-header">
+                    <div class="section-number">8</div>
+                    <h2>Contacto y soporte</h2>
+                </div>
+                <p>Para cualquier consulta, reporte de error o sugerencia relacionada con estos términos o con el funcionamiento de la aplicación, puede contactar al desarrollador a través de la información de contacto disponible en la ficha de la aplicación en <strong>Google Play Store</strong>.</p>
+            </section>
+
+        </div>
+
+        <footer class="footer">
+            <span class="footer-ornament">❧</span>
+            <p>&copy; 2026 Santa Biblia Reina Valera 1960 (Sin Anuncio) · Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
